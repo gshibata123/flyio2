@@ -1,7 +1,4 @@
-FROM alpine:latest
-
-RUN apk add --no-cache nginx nginx-mod-rtmp
-
-COPY nginx.conf /etc/nginx/nginx.conf
-
-CMD ["nginx", "-g", "daemon off;"]
+FROM alfg/nginx-rtmp
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
+COPY html /usr/share/nginx/html
+EXPOSE 1935 8080
