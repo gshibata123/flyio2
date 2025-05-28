@@ -1,8 +1,13 @@
-app = "rtmp-fly-app"
-
-[build]
+app = "gopro-stream"
 
 [env]
+
+[[services]]
+  internal_port = 8080
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 80
 
 [[services]]
   internal_port = 1935
@@ -10,10 +15,3 @@ app = "rtmp-fly-app"
 
   [[services.ports]]
     port = 1935
-
-[[services]]
-  internal_port = 80
-  protocol = "tcp"
-
-  [[services.ports]]
-    port = 80
