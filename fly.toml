@@ -1,0 +1,19 @@
+app = "rtmp-fly-app"
+
+[build]
+
+[env]
+
+[[services]]
+  internal_port = 1935
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 1935
+
+[[services]]
+  internal_port = 80
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 80
